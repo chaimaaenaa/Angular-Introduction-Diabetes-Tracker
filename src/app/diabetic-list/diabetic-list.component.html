@@ -1,1 +1,10 @@
-<p>diabetic-list works!</p>
+<div>
+  <h2>Diabetics</h2>
+  <ul>
+    <li *ngFor="let diabetic of diabetics">
+      {{ diabetic.name }} ({{ diabetic.email }})
+      <button (click)="deleteDiabetic(diabetic.id)">Delete</button>
+    </li>
+  </ul>
+</div>
+<router-outlet></router-outlet>

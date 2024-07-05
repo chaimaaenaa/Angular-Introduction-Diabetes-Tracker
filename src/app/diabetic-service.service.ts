@@ -7,27 +7,23 @@ import { Diabetic } from './diabetic';
   providedIn: 'root'
 })
 export class DiabeticService {
-  private baseUrl = 'http://localhost:8080/api/diabetics';
+  private apiUrl = 'http://localhost:8083/api/diabetics';
 
   constructor(private http: HttpClient) { }
 
-  getDiabetic(id: number): Observable<Diabetic> {
-    return this.http.get<Diabetic>(`${this.baseUrl}/${id}`);
+  getAllDiabetics(): Observable<Diabetic[]> {
+    return this.http.get<Diabetic[]>(`${this.apiUrl}`);
   }
 
-  getDiabeticsList(): Observable<Diabetic[]> {
-    return this.http.get<Diabetic[]>(`${this.baseUrl}`);
+  getDiabeticById(id: number): Observable<Diabetic> {
+    return this.http.get<Diabetic>(`${this.apiUrl}/${id}`);
   }
 
-  createDiabetic(diabetic: Diabetic): Observable<Object> {
-    return this.http.post(`${this.baseUrl}`, diabetic);
+  addDiabetic(diabetic: Diabetic): Observable<Diabetic> {
+    return this.http.post<Diabetic>(`${this.apiUrl}`, diabetic);
   }
 
-  updateDiabetic(id: number, diabetic: Diabetic): Observable<Object> {
-    return this.http.put(`${this.baseUrl}/${id}`, diabetic);
-  }
-
-  deleteDiabetic(id: number): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
+  deleteDiabetic(id: number | undefined): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
 }

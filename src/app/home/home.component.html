@@ -1,0 +1,87 @@
+<!-- home.component.html -->
+<div class="container mt-5">
+  <div class="header text-center">
+    <h1>Welcome to Diabetes Tracker</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <img src="https://biogroup.fr/wp-content/uploads/2023/05/Diabete.jpg" class="card-img-top" alt="Diabetic">
+        <div class="card-body text-center">
+          <h5 class="card-title">Diabetic Management</h5>
+          <p class="card-text">Manage all your diabetic information efficiently.</p>
+          <a [routerLink]="['/diabetic-list']" class="btn btn-primary">
+            <i class="fa fa-arrow-right"></i> Go to Diabetic List
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <img src="https://i.notretemps.com/2000x1125/smart/2023/06/12/illustration-de-diabete.jpeg" class="card-img-top" alt="Glycemie">
+        <div class="card-body text-center">
+          <h5 class="card-title">Glycemia Tracking</h5>
+          <p class="card-text">Track and manage your blood glucose readings.</p>
+          <a [routerLink]="['/glycemie-list']" class="btn btn-primary">
+            <i class="fa fa-arrow-right"></i> Go to Glycemia List
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="header text-center">
+    <h2>Features</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card text-center shadow">
+        <div class="card-body">
+          <div class="card-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h5 class="card-title">Users</h5>
+          <p class="card-text">Manage Users</p>
+          <a [routerLink]="['/user/list']" class="btn btn">List Users</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card text-center shadow">
+        <div class="card-body">
+          <div class="card-icon">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h5 class="card-title">Conseils</h5>
+          <p class="card-text">Manage Conseils</p>
+          <a [routerLink]="['/conseil/list']" class="btn btn">List Conseils</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card text-center shadow">
+        <div class="card-body">
+          <div class="card-icon">
+            <i class="fas fa-heartbeat"></i>
+          </div>
+          <h5 class="card-title">Glycemies</h5>
+          <p class="card-text">Manage Glycemies</p>
+          <a [routerLink]="['/glycemie/list']" class="btn btn">List Glycemies</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card text-center shadow">
+        <div class="card-body">
+          <div class="card-icon">
+            <i class="fas fa-utensils"></i>
+          </div>
+          <h5 class="card-title">Repas</h5>
+          <p class="card-text">Manage Repas</p>
+          <a [routerLink]="['/repas/list']" class="btn btn">List Repas</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+.footer {
+  padding-top: 20px;
+  background-color: #17a2b8;
+}
+
+h5 {
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.text-white:hover {
+  text-decoration: underline;
+}
+
+.fa {
+  margin-right: 5px;
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+.bg-dark {
+  background-color: #343a40 !important;
+}
+
+.text-white {
+  color: #fff !important;
+}
